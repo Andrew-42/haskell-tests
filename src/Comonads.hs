@@ -10,7 +10,7 @@ import System.IO (hFlush, stdout)
 data Zipper a = Zipper [a] a [a]
 
 instance (Show a) => Show (Zipper a) where
-    show :: (Show a) => Zipper a -> String
+    show :: Zipper a -> String
     show (Zipper lz z rz) = unwords $ map show $ take 5 lz ++ [z] ++ take 5 rz
 
 instance Functor Zipper where

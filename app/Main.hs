@@ -1,6 +1,6 @@
 module Main (main) where
 
-import Lenses
+import qualified Lenses as L
 
 main :: IO ()
-main = someFunc
+main = L.main
